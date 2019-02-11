@@ -11,7 +11,7 @@ var computerPick = arrayChoices[Math.floor(Math.random() * arrayChoices.length)]
 console.log(computerPick);
 
 // Upon conditional logic completion, reset 1) guesses left, 2) guessed letter, and 3) have computer pick a new letter.
-var reset = function () {
+var reset = function() {
     guessesLeft = 9;
     guessedLetters = [];
     computerPick = arrayChoices[Math.floor(Math.random() * arrayChoices.length)];
