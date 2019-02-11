@@ -13,15 +13,25 @@ html {
     text-align: center;
     margin-top:120px;
     line-height: 25px;
-    
-  }
-  .lastResult {
-    color: white;
-    padding: 3px;
   }
 
-  h1, p ,.container, .resultTally {
-    margin-left: -50px;
+  h1, #instruction, #resultTally {
+    margin-left: -30px;
+  }
+
+  h1 {
+    color: purple;
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  #instruction {
+    /* color: teal; */
+    margin-bottom: 28px;
+  }
+
+  #resultTally {
+    color: red;
   }
 
 
