@@ -26,20 +26,20 @@ document.onkeyup = function(event) {
     // Make sure user picks a letter from A-Z
     if ((userPick === "a") || (userPick === "b") || (userPick === "c") || (userPick === "d") || (userPick === "e") || (userPick === "f") || (userPick === "g") || (userPick === "h") || (userPick === "i") || (userPick === "j") || (userPick === "k") || (userPick === "l") || (userPick === "m") || (userPick === "n") || (userPick === "o") || (userPick === "p") || (userPick === "q") || (userPick === "r") || (userPick === "s") || (userPick === "t") || (userPick === "u") || (userPick === "v") || (userPick === "w") || (userPick === "x") || (userPick === "y") || (userPick === "z")) {
         guessedLetters.push(userPick);
-        guessesLeft--; //or use guessesLeft = guessesLeft-1;
 
         // Conditional Logic to determine the outcome (win/loss) and increment the appropriate numbers
-        if (guessesLeft > 0) {
-            if (userPick === computerPick) {
-                wins++;
-                alert("You guess the correct letter " + computerPick + " that I'm thinking of!");
-                reset();
-            }
+        if ((guessesLeft > 0) && (userPick === computerPick)) {
+            wins++;
+            alert("You guess the correct letter " + computerPick + " that I'm thinking of!");
+            reset();
         }
-        else {
+        else if (guessesLeft === 1) {
             losses++;
             alert("Wrong-O, the letter I'm thinking of is " + computerPick + ". Try again.");
             reset();
+        }
+        else {
+            guessesLeft--; //or use guessesLeft = guessesLeft-1;
         }
     }
     else {
