@@ -50,6 +50,6 @@ document.onkeyup = function(event) {
     var html = "<p>Wins: " + wins + "</p>" +
                 "<p>Losses: " + losses + "</p>" +
                 "<p>Guesses left: " + guessesLeft + "</p>" +
-                "<p>Your guesses so far: " + guessedLetters + "</p>";
+                "<p>Your guesses so far: " + guessedLetters.join(", ") + "</p>";
     document.getElementById("resultTally").innerHTML = html;
 }
